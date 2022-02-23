@@ -16,4 +16,4 @@ var n,t=arguments[3],r=require("buffer").Buffer;(function(){var r,e=200,u="Unsup
 },{"buffer":"dskh"}],"TTyb":[function(require,module,exports) {
 const e=require("lodash"),t="feedback-form-state",o=document.querySelector(".feedback-form");function a(e){localStorage.setItem(t,JSON.stringify(n))}function n(){return{email:o.elements.email.value,message:o.elements.message.value}}function r(e){e.preventDefault(),console.log(n()),o.reset(),localStorage.removeItem(t)}function l(){let e;try{e=JSON.parse(localStorage.getItem(t))}catch(o){}}o.addEventListener("input",e.throttle(a)),o.addEventListener("submit",e.throttle(r)),l();
 },{"lodash":"B1iE"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08/03-feedback.cdbc40d4.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.b9722a46.js.map
