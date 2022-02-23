@@ -32,6 +32,5 @@ function checkLocalStorage(){
     try {
       currentFieldStatus = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     } catch (error) {
-      
     }
 }
