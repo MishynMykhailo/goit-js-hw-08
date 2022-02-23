@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://mishynmykhailo.github.io/goit-js-hw-08/"
   },
   "keywords": [],
   "author": "",
   "license": "",
   "bugs": {
-    "url": ""
+    "url": "https://mishynmykhailo.github.io/goit-js-hw-08/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
