@@ -4,11 +4,12 @@ const LOCALSTORAGE_KEY = "feedback-form-state";
 const formEl = document.querySelector(".feedback-form")
 
 formEl.addEventListener('input',_.throttle(onFormInput))
-formEl.addEventListener('submit',_.throttle(onFormSumbit))
+formEl.addEventListener('submit',_.throttle(onFormSubmit))
 
 checkLocalStorage();
-function onFormInput(e){
-localStorage.setItem(LOCALSTORAGE_KEY,JSON.stringify(createStatusForm))
+
+function onFormInput(e) {
+localStorage.setItem(LOCALSTORAGE_KEY,JSON.stringify(createStatusForm()))
 };
 
 function createStatusForm(){
@@ -19,7 +20,7 @@ function createStatusForm(){
     
 }
 
-function onFormSumbit(e){
+function onFormSubmit(e){
     e.preventDefault();
     console.log(createStatusForm());
     formEl.reset();
@@ -31,6 +32,8 @@ function checkLocalStorage(){
     let currentFieldStatus;
     try {
       currentFieldStatus = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
+      formEl.elements.email.value = currentFieldStatus.email;
+    formEl.elements.message.value = currentFieldStatus.message;
     } catch (error) {
     }
 }
