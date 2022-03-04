@@ -22,9 +22,14 @@ function createStatusForm(){
 
 function onFormSubmit(e){
     e.preventDefault();
-    console.log(createStatusForm());
+    if (e.currentTarget.elements.email.value === "" || event.currentTarget.elements.message.value === ""){
+      alert("Заполни окна")
+    }else {
+      console.log(createStatusForm());
     formEl.reset();
     localStorage.removeItem(LOCALSTORAGE_KEY);
+    }
+    
 };
     
 
